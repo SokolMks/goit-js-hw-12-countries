@@ -19,7 +19,7 @@ userInput.addEventListener('input', _.debounce(searchForCountry, 1500));
 function searchForCountry(e) {
   const searchInput = e.target.value;
   clearHtml();
-  console.log(searchInput);
+  //console.log(searchInput);
 
   findCountry.fetchCountries(searchInput).then(data => {
     // console.log(data);
