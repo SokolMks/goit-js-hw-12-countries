@@ -1,15 +1,19 @@
-<div>
-  <h1>Switzerland</h1>
-  <ul>
-    <li>Capital: Bern</li>
-    <li>Population: 8341600</li>
-    <li>Languages:
+{{#each this}}
+<div class="country-card">
+  <h1 class="country-title">{{name}}</h1>
+  <ul class="country-display">
+    <li class="country-description"><b>Capital: </b> {{capital}}</li>
+    <li class="country-description"><b>Population: </b> {{population}}</li>
+    <li class="country-description"><b>Languages: </b>
       <ul>
-        <li></li>
+        {{#each languages}}
+        <li class="language-list">{{name}}</li>
+        {{/each}}
       </ul> 
     </li>
   </ul>
   <div>
-    <img src="" alt="">
+    <img src="{{flag}}" alt="{{name}} flag" width="400px">
   </div>
 </div>
+{{/each}}
